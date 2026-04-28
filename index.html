@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio website showcasing projects, CV, and professional links.">
+  <title>Mats Yamakoshi | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top">Mats Yamakoshi</a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+        Dark mode
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section reveal" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Software Developer</p>
+          <h1>Hi, I am <span class="accent">Mats Yamakoshi</span>.</h1>
+          <p>
+            Welcome to my website! Feel free to take a quick glance at my projects and my work. 
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn btn-secondary" href="assets/cv.pdf" download>Download CV</a>
+          </div>
+          <div class="social-links" aria-label="Social links">
+            <a href="https://www.linkedin.com/in/mats-yamakoshi-60bbaa288/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/yamakoshimats" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+        <div class="hero-image-wrap">
+          <img class="hero-image" src="assets/profile.jpg" alt="Portrait of Mats Yamakoshi Name">
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          I am a current a masters student of Social Data Science at the University of Mannheim. In combinaiton with my political science background I enjoy implementing advanced ML techniques to current problems. 
+        </p>
+        <ul class="quick-facts">
+          <li><strong>Location:</strong> Mannheim</li>
+          <li><strong>Core Stack:</strong> Python, R, SQL, Excel</li>
+          <li><strong>Open To:</strong> Internship and entry-level Data Analyst and Data Engineering roles</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section reveal" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Coding Projects</h2>
+          <p>Filter projects by topic or technology.</p>
+        </div>
+        <div id="project-filters" class="project-filters" role="toolbar" aria-label="Project filters"></div>
+        <div id="projects-grid" class="projects-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="cv">
+      <div class="container">
+        <h2>CV</h2>
+        <p>
+          Here is a short overview of my profile. For more details you can download my full CV below.
+        </p>
+        <div class="cv-summary">
+          <h3>Highlights</h3>
+          <ul>
+            <li>Hands on political science background.</li>
+            <li>Experience with data analysis and scripting workflows.</li>
+            <li>Strong focus on clean code and user-centered features.</li>
+          </ul>
+        </div>
+        <button id="cv-toggle" class="btn btn-secondary" type="button" aria-expanded="false" aria-controls="cv-details">
+          Show more
+        </button>
+        <div id="cv-details" class="cv-details" hidden>
+          <h3>Work Experience</h3>
+          <p>07.2024-08.2024: Intern at the Federal Ministry of Education and Research (BMBF) in Berlin.</p>
+          <h3>Education & Experience</h3>
+          <p> 9.2025-7.2027: Master of Social Data Science at the University of Mannheim.</p>
+          <p> 9.2021-7.2025: Bachelor of Political Science and Public Administration at the University of Konstanz.</p>
+          <h3>Skills</h3>
+          <p>Python, R, SQL, Excel, Power BI, Tableau, Power Point, Word</p>
+          <p>German (C2), English (C2), French (B2), Japanese (A2)</p>
+
+        </div>
+        <a class="btn btn-primary" href="assets/cv.pdf" download>Download Full CV</a>
+      </div>
+    </section>
+
+    <section class="section reveal" id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Interested in working together? Reach out using the links below.</p>
+        <div class="contact-links">
+          <a class="btn btn-secondary" href="mailto:yamakoshimats@gmail.com">Email Me</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/mats-yamakoshi-60bbaa288/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn btn-secondary" href="https://github.com/yamakoshimats" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>&copy; <span id="year"></span> Mats Yamakoshi. All rights reserved.</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
